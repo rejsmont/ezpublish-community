@@ -14,6 +14,12 @@ php ./bin/.travis/enablelegacybundle.php
 echo "> Install dependencies through composer"
 composer install --dev --prefer-dist
 
+echo "> Download and extract eZ packages"
+sh ./bin/.travis/download_ez_packages.sh
+
+echo "> Copy kickstart.ini"
+cp ./bin/.travis/kickstart.ini ezpublish_legacy/
+
 echo "> Set folder permissions"
 sudo find {ezpublish/{cache,logs,config,sessions},ezpublish_legacy/{design,extension,settings,var},web} -type d | sudo xargs chmod -R 777
 sudo find {ezpublish/{cache,logs,config,sessions},ezpublish_legacy/{design,extension,settings,var},web} -type f | sudo xargs chmod -R 666
