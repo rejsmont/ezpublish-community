@@ -6,7 +6,7 @@ echo "> Setup github auth key to not reach api limit"
 ./bin/.travis/install_composer_github_key.sh
 
 echo "> Add legacy-bridge to requirements"
-composer require --no-update "ezsystems/legacy-bridge:dev-master"
+composer require --no-update "ezsystems/legacy-bridge:dev-bdd_wizard_kickstart"
 
 echo "> Add LegacyBundle to Kernel"
 php ./bin/.travis/enablelegacybundle.php
