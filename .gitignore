@@ -27,3 +27,9 @@ composer.lock
 .project
 .settings/
 
+/web/css/
+/web/js/
+/bin/doctrine-dbal
+/bin/security-checker
+/bin/webunit
+/ezpublish/config/ezpublish.yml
